@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Garcia | Portfolio</title>
+  <link rel="stylesheet" href="styles/css/style.css">
+  <script src="assets/index.js"></script>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="page-header--wrapper max-width">
+      <div class="logo-wrapper">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="64" height="46" viewBox="0 0 64 46">
+          <path
+            d="M45.296 45.152C40.944 45.152 37.104 44.256 33.776 42.464C30.4907 40.6293 27.9093 38.048 26.032 34.72C24.1973 31.3493 23.28 27.3813 23.28 22.816C23.28 18.3787 24.1973 14.496 26.032 11.168C27.8667 7.84 30.512 5.25867 33.968 3.424C37.4667 1.54667 41.6907 0.607998 46.64 0.607998C48.9013 0.607998 50.992 0.863998 52.912 1.376C54.8747 1.888 56.7307 2.63466 58.48 3.616L58.736 12.576H58.096L54.512 5.92C53.9573 4.85333 53.4453 4.08533 52.976 3.616C52.5067 3.14666 51.9093 2.784 51.184 2.528C50.5013 2.31466 49.8613 2.16533 49.264 2.08C48.7093 1.952 47.9627 1.888 47.024 1.888C44.3787 1.888 42.032 2.592 39.984 4C37.9787 5.408 36.4213 7.648 35.312 10.72C34.2027 13.792 33.648 17.824 33.648 22.816C33.648 27.7653 34.16 31.7973 35.184 34.912C36.2507 38.0267 37.744 40.3093 39.664 41.76C41.584 43.168 43.8027 43.872 46.32 43.872C46.704 43.872 47.0667 43.8507 47.408 43.808C47.792 43.7227 48.1547 43.6373 48.496 43.552C49.3067 43.424 49.84 43.0827 50.096 42.528C50.352 41.9733 50.48 41.312 50.48 40.544V27.872C50.48 26.208 49.6267 25.184 47.92 24.8L44.976 24.032V23.392H63.024V24.032L62.128 24.288C60.5067 24.8 59.696 25.8667 59.696 27.488V41.376C57.4773 42.6133 55.216 43.552 52.912 44.192C50.6507 44.832 48.112 45.152 45.296 45.152Z" />
+          <path
+            d="M0.515999 45V44.355L2.1285 43.7745C2.9885 43.4305 3.655 43.022 4.128 42.549C4.601 42.033 4.988 41.3235 5.289 40.4205L18.576 2.301H24.0585L37.152 40.6785C37.496 41.6245 37.883 42.3555 38.313 42.8715C38.743 43.3445 39.4095 43.753 40.3125 44.097L41.0865 44.355V45H24.7035V44.355L25.671 44.0325C26.574 43.6885 27.1115 43.2155 27.2835 42.6135C27.4985 41.9685 27.477 41.216 27.219 40.356L24.1875 31.068H9.8685L6.7725 40.1625C6.4715 41.1085 6.364 41.861 6.45 42.42C6.579 42.979 7.095 43.4305 7.998 43.7745L9.417 44.355V45H0.515999ZM10.32 29.778H23.8005L17.286 9.7185L10.32 29.778Z" />
+        </svg>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav--items">
+          <li class="main-nav--item"><a href="#">Home</a></li>
+          <li class="main-nav--item"><a href="#">About</a></li>
+          <li class="main-nav--item"><a href="#">Projects</a></li>
+        </ul>
+      </nav>
+      <button aria-label="Theme Toggle" class="theme-toggle" id="themeToggle">
+        <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            d="M144.7 98.7c-21 34.1-33.1 74.3-33.1 117.3c0 98 62.8 181.4 150.4 211.7c-12.4 2.8-25.3 4.3-38.6 4.3C126.6 432 48 353.3 48 256c0-68.9 39.4-128.4 96.8-157.3zm62.1-66C91.1 41.2 0 137.9 0 256C0 379.7 100 480 223.5 480c47.8 0 92-15 128.4-40.6c1.9-1.3 3.7-2.7 5.5-4c4.8-3.6 9.4-7.4 13.9-11.4c2.7-2.4 5.3-4.8 7.9-7.3c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-3.7 .6-7.4 1.2-11.1 1.6c-5 .5-10.1 .9-15.3 1c-1.2 0-2.5 0-3.7 0l-.3 0c-96.8-.2-175.2-78.9-175.2-176c0-54.8 24.9-103.7 64.1-136c1-.9 2.1-1.7 3.2-2.6c4-3.2 8.2-6.2 12.5-9c3.1-2 6.3-4 9.6-5.8c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-3.6-.3-7.1-.5-10.7-.6c-2.7-.1-5.5-.1-8.2-.1c-3.3 0-6.5 .1-9.8 .2c-2.3 .1-4.6 .2-6.9 .4z" />
+        </svg>
+        <svg class="theme-icon display-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M375.7 19.7c-1.5-8-6.9-14.7-14.4-17.8s-16.1-2.2-22.8 2.4L256 61.1 173.5 4.2c-6.7-4.6-15.3-5.5-22.8-2.4s-12.9 9.8-14.4 17.8l-18.1 98.5L19.7 136.3c-8 1.5-14.7 6.9-17.8 14.4s-2.2 16.1 2.4 22.8L61.1 256 4.2 338.5c-4.6 6.7-5.5 15.3-2.4 22.8s9.8 13 17.8 14.4l98.5 18.1 18.1 98.5c1.5 8 6.9 14.7 14.4 17.8s16.1 2.2 22.8-2.4L256 450.9l82.5 56.9c6.7 4.6 15.3 5.5 22.8 2.4s12.9-9.8 14.4-17.8l18.1-98.5 98.5-18.1c8-1.5 14.7-6.9 17.8-14.4s2.2-16.1-2.4-22.8L450.9 256l56.9-82.5c4.6-6.7 5.5-15.3 2.4-22.8s-9.8-12.9-17.8-14.4l-98.5-18.1L375.7 19.7zM269.6 110l65.6-45.2 14.4 78.3c1.8 9.8 9.5 17.5 19.3 19.3l78.3 14.4L402 242.4c-5.7 8.2-5.7 19 0 27.2l45.2 65.6-78.3 14.4c-9.8 1.8-17.5 9.5-19.3 19.3l-14.4 78.3L269.6 402c-8.2-5.7-19-5.7-27.2 0l-65.6 45.2-14.4-78.3c-1.8-9.8-9.5-17.5-19.3-19.3L64.8 335.2 110 269.6c5.7-8.2 5.7-19 0-27.2L64.8 176.8l78.3-14.4c9.8-1.8 17.5-9.5 19.3-19.3l14.4-78.3L242.4 110c8.2 5.7 19 5.7 27.2 0zM256 368a112 112 0 1 0 0-224 112 112 0 1 0 0 224zM192 256a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero--wrapper max-width">
+      <div class="hero--flex">
+        <div class="hero--flex-left">
+          <h1>Alejandro Isac Garcia-Ruiz</h1>
+          <span>Web Developer - Web Designer</span>
+        </div>
+        <div class="hero--flex-right">
+          <img src="assets/images/me-sooz.png" alt="illustration of man with cat">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about">
+    <div class="about--wrapper max-width">
+      <h2>Some Things About Me</h2>
+      <p>Hi, I’m Alejandro, a passionate and detail-oriented web developer with 5 years of experience in crafting
+        dynamic, user-friendly websites.I’ve had the opportunity to work with a wide range of technologies,
+        including HTML, SCSS, JavaScript, React, WordPress, and PHP, among others. My expertise lies in building and
+        maintaining high-performance websites that not only look great but also deliver seamless experiences for users.
+      </p>
+      <br />
+      <p> I also understand the importance of creating websites that are not only visually stunning but also optimized
+        for search engines to drive organic traffic. From conducting keyword research and optimizing on-page elements to
+        ensuring fast load times and mobile responsiveness, I ensure that every website I build is set up for success
+        from day one.</p>
+    </div>
+
+    <div class="about--experience  max-width">
+      <ul class="accordion-items">
+        <li class="faq-item">
+          <span class="accordion faq-title">
+            Web Developer - Digital NEST - 2020 - 2021
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+              </path>
+            </svg>
+          </span>
+          <p class="panel faq-answer">To prepare your furnace for winter, schedule regular maintenance with our team at
+            Lion Home Service. We will check and clean the components, replace air filters, and ensure your furnace is
+            running efficiently. Contact us at <a class="phoneLink" href="tel:9702303165">(970) 230-3165</a> to book
+            your appointment with Lion Home Service today. <a
+              href="/heating/winterizing-warmth-tips-for-a-winter-ready-furnace/">Learn More</a></p>
+        </li>
+        <li class="faq-item">
+          <span class="accordion faq-title">
+            Web Developer - Bizz Nest - 2021 - 2023
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+              </path>
+            </svg>
+          </span>
+          <p class="panel faq-answer">To prepare your furnace for winter, schedule regular maintenance with our team at
+            Lion Home Service. We will check and clean the components, replace air filters, and ensure your furnace is
+            running efficiently. Contact us at <a class="phoneLink" href="tel:9702303165">(970) 230-3165</a> to book
+            your appointment with Lion Home Service today. <a
+              href="/heating/winterizing-warmth-tips-for-a-winter-ready-furnace/">Learn More</a></p>
+        </li>
+        <li class="faq-item">
+          <span class="accordion faq-title">
+            Web Developer - Contractor Advertising - 2023 - Current
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+              </path>
+            </svg>
+          </span>
+          <p class="panel faq-answer">To prepare your furnace for winter, schedule regular maintenance with our team at
+            Lion Home Service. We will check and clean the components, replace air filters, and ensure your furnace is
+            running efficiently. Contact us at <a class="phoneLink" href="tel:9702303165">(970) 230-3165</a> to book
+            your appointment with Lion Home Service today. <a
+              href="/heating/winterizing-warmth-tips-for-a-winter-ready-furnace/">Learn More</a></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects"></section>
+
+  <footer class="page-footer">
+    <div class="page-footer--wrapper max-width">
+      <span>Designed & Built By: <strong>Me :)</strong></span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
