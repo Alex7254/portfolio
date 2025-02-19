@@ -256,11 +256,34 @@ select {
   background-color: var(--section-bg-color);
   padding: 3% 1.5em;
 }
-.about .about--wrapper {
+.about .about--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em 0;
+}
+.about .about--flex .about--wrapper {
   margin-bottom: 2em;
 }
-.about .about--wrapper p {
+.about .about--flex .about--wrapper p {
   font-size: 1.15em;
+}
+.about .about--flex .about--experience {
+  width: 100%;
+}
+@media screen and (min-width: 950px) {
+  .about .about--flex {
+    flex-direction: row;
+    gap: 0 4em;
+  }
+  .about .about--flex .about--wrapper,
+  .about .about--flex .about--experience {
+    width: 50%;
+  }
+  .about .about--flex .about--wrapper {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer {
