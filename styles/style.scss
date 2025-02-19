@@ -324,11 +324,40 @@ select {
   background-color: var(--section-bg-color);
   padding: 3% 1.5em;
 
-  .about--wrapper {
-    margin-bottom: 2em;
+  .about--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4em 0;
 
-    p {
-      font-size: 1.15em;
+    .about--wrapper {
+      margin-bottom: 2em;
+
+      p {
+        font-size: 1.15em;
+      }
+    }
+
+    .about--experience {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    .about--flex {
+      flex-direction: row;
+      gap: 0 4em;
+
+      .about--wrapper,
+      .about--experience {
+        width: 50%;
+      }
+
+      .about--wrapper {
+        margin-bottom: 0;
+      }
+
     }
   }
 }
