@@ -87,6 +87,7 @@ select {
   --text-color: hsl(236, 91%, 21%);
   --section-bg-color: hsl(248, 100%, 97%);
   --primary-color: hsl(221, 56%, 36%);
+  --item-bg-color: hsl(0, 0%, 100%);
 }
 
 [data-theme="dark"] {
@@ -94,6 +95,7 @@ select {
   --text-color: #fff;
   --section-bg-color: hsl(235, 86%, 11%);
   --primary-color: hsl(256, 92%, 85%);
+  --item-bg-color: hsl(235, 86%, 25%);
 
   $bg-color: #131314;
   $text-color: #fff;
@@ -115,10 +117,9 @@ select {
 // Accordion Items
 .accordion-items {
   list-style-type: none;
-  margin: 2.5em 0;
 
   .accordion {
-    background-color: #fff;
+    background-color: var(--item-bg-color);
     color: var(--text-color);
     cursor: pointer;
     padding: 1.1em;
@@ -169,7 +170,7 @@ select {
   }
 
   .panel {
-    background-color: white;
+    background-color: var(--item-bg-color);
     display: none;
     overflow: hidden;
     border-radius: 1em;
@@ -244,7 +245,7 @@ select {
         height: 100%;
 
         .main-nav--item {
-          font-size: 1.1em;
+          font-size: 1.15em;
 
           a {
             padding: 0.3em;
@@ -324,6 +325,7 @@ select {
   padding: 3% 1.5em;
 
   .about--wrapper {
+    margin-bottom: 2em;
 
     p {
       font-size: 1.15em;
@@ -338,4 +340,5 @@ select {
   padding: 3% 1em;
   text-align: center;
 }
+
 // End Footer Styles ----------
