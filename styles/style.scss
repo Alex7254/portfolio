@@ -114,6 +114,10 @@ select {
   margin: auto;
 }
 
+.section-padding {
+  padding: 3% 1.5em;
+}
+
 // Accordion Items
 .accordion-items {
   list-style-type: none;
@@ -322,7 +326,6 @@ select {
 // About Styles ----------
 .about {
   background-color: var(--section-bg-color);
-  padding: 3% 1.5em;
 
   .about--flex {
     display: flex;
@@ -366,7 +369,6 @@ select {
 
 // Footer Styles ----------
 .page-footer {
-  padding: 3% 1em;
   text-align: center;
 }
 
