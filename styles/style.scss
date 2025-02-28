@@ -381,48 +381,81 @@ select {
 .projects {
   .projects-slider {
     margin-top: 2em;
+    position: relative;
 
     .project {
       max-width: 25em;
       border: solid 1px var(--primary-color);
       border-radius: 1em;
       overflow: hidden;
-      min-height: 31em;
-      max-height: 36em;
-
+      // min-height: 31em;
+      height: 34em;
 
       .project--img-container {
         position: relative;
+        height: 35%;
+        overflow: hidden;
 
         .project--img-gradient {
+          z-index: 2;
           position: absolute;
           height: 100%;
           width: 100%;
           background: linear-gradient(180deg, rgba(2, 0, 36, 0) 10%, var(--primary-color));
         }
+
+
+        &:hover {
+
+          img {
+            transition: all 0.5s ease-out;
+            transform: scale(1.15);
+            object-position: center top;
+          }
+
+        }
       }
 
-      .project--information {
+      .project--information-flex {
         padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 65%;
 
-        .project--title {
-          font-weight: bold;
-          font-size: 1.4em;
-        }
+        .project--information {
 
-        p {
-          font-size: 1.1em;
+          // margin-bottom: auto;
+          .project--title {
+            font-weight: bold;
+            font-size: 1.4em;
+          }
+
+          p {
+            font-size: 1.1em;
+          }
         }
 
       }
 
       .project--links {
-        padding: 1em;
         color: var(--text-color);
 
         .project--link {
-          fill: currentColor;
-          max-width: 1.5em;
+          width: fit-content;
+          height: fit-content;
+          display: inline-block;
+          color: var(--text-color);
+
+          &:visited {
+            color: var(--text-color);
+          }
+
+          svg {
+            fill: currentColor;
+            width: 1.5em;
+
+          }
         }
       }
     }

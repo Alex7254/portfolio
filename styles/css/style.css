@@ -299,41 +299,61 @@ select {
 
 .projects .projects-slider {
   margin-top: 2em;
+  position: relative;
 }
 .projects .projects-slider .project {
   max-width: 25em;
   border: solid 1px var(--primary-color);
   border-radius: 1em;
   overflow: hidden;
-  min-height: 31em;
-  max-height: 36em;
+  height: 34em;
 }
 .projects .projects-slider .project .project--img-container {
   position: relative;
+  height: 35%;
+  overflow: hidden;
 }
 .projects .projects-slider .project .project--img-container .project--img-gradient {
+  z-index: 2;
   position: absolute;
   height: 100%;
   width: 100%;
   background: linear-gradient(180deg, rgba(2, 0, 36, 0) 10%, var(--primary-color));
 }
-.projects .projects-slider .project .project--information {
-  padding: 1em;
+.projects .projects-slider .project .project--img-container:hover img {
+  transition: all 0.5s ease-out;
+  transform: scale(1.15);
+  object-position: center top;
 }
-.projects .projects-slider .project .project--information .project--title {
+.projects .projects-slider .project .project--information-flex {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65%;
+}
+.projects .projects-slider .project .project--information-flex .project--information .project--title {
   font-weight: bold;
   font-size: 1.4em;
 }
-.projects .projects-slider .project .project--information p {
+.projects .projects-slider .project .project--information-flex .project--information p {
   font-size: 1.1em;
 }
 .projects .projects-slider .project .project--links {
-  padding: 1em;
   color: var(--text-color);
 }
 .projects .projects-slider .project .project--links .project--link {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  color: var(--text-color);
+}
+.projects .projects-slider .project .project--links .project--link:visited {
+  color: var(--text-color);
+}
+.projects .projects-slider .project .project--links .project--link svg {
   fill: currentColor;
-  max-width: 1.5em;
+  width: 1.5em;
 }
 
 .page-footer {
