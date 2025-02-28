@@ -1,8 +1,3 @@
-const setTheme = (theme) => {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-}
-
 const getPreferredTheme = () => {
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
@@ -13,6 +8,11 @@ const getPreferredTheme = () => {
 
 const applyTheme = () => {
   setTheme(getPreferredTheme());
+}
+
+const setTheme = (theme) => {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
 }
 
 const toggleTheme = () => {
@@ -29,11 +29,6 @@ const toggleTheme = () => {
 
 // Apply theme on page load
 applyTheme();
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
   const themeToggleButton = document.getElementById('themeToggle');
