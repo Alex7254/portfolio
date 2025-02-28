@@ -342,8 +342,17 @@ select {
       }
     }
 
-    .about--experience {
+    .experience {
       width: 100%;
+
+      .experience--title {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        .experience--title-info {
+          font-size: 0.75em;
+        }
+      }
     }
   }
 
@@ -353,7 +362,7 @@ select {
       gap: 0 4em;
 
       .about--wrapper,
-      .about--experience {
+      .experience {
         width: 50%;
       }
 

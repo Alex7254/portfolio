@@ -272,8 +272,16 @@ select {
 .about .about--flex .about--wrapper p {
   font-size: 1.15em;
 }
-.about .about--flex .about--experience {
+.about .about--flex .experience {
   width: 100%;
+}
+.about .about--flex .experience .experience--title {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.about .about--flex .experience .experience--title .experience--title-info {
+  font-size: 0.75em;
 }
 @media screen and (min-width: 950px) {
   .about .about--flex {
@@ -281,7 +289,7 @@ select {
     gap: 0 4em;
   }
   .about .about--flex .about--wrapper,
-  .about .about--flex .about--experience {
+  .about .about--flex .experience {
     width: 50%;
   }
   .about .about--flex .about--wrapper {
