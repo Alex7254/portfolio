@@ -349,6 +349,7 @@ select {
         display: flex;
         flex-direction: column;
         width: fit-content;
+
         .experience--title-info {
           font-size: 0.72em;
         }
@@ -376,9 +377,62 @@ select {
 
 // End About Styles ----------
 
+// Projects Styles ----------
+.projects {
+  .projects-slider {
+    margin-top: 2em;
+
+    .project {
+      max-width: 25em;
+      border: solid 1px var(--primary-color);
+      border-radius: 1em;
+      overflow: hidden;
+      min-height: 31em;
+      max-height: 36em;
+
+
+      .project--img-container {
+        position: relative;
+
+        .project--img-gradient {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(180deg, rgba(2, 0, 36, 0) 10%, var(--primary-color));
+        }
+      }
+
+      .project--information {
+        padding: 1em;
+
+        .project--title {
+          font-weight: bold;
+          font-size: 1.4em;
+        }
+
+        p {
+          font-size: 1.1em;
+        }
+
+      }
+
+      .project--links {
+        padding: 1em;
+        color: var(--text-color);
+
+        .project--link {
+          fill: currentColor;
+          max-width: 1.5em;
+        }
+      }
+    }
+  }
+}
+
 // Footer Styles ----------
 .page-footer {
   text-align: center;
+  background-color: var(--section-bg-color);
 }
 
 // End Footer Styles ----------
