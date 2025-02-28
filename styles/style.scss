@@ -114,6 +114,10 @@ select {
   margin: auto;
 }
 
+.section-padding {
+  padding: 3% 1.5em;
+}
+
 // Accordion Items
 .accordion-items {
   list-style-type: none;
@@ -322,7 +326,6 @@ select {
 // About Styles ----------
 .about {
   background-color: var(--section-bg-color);
-  padding: 3% 1.5em;
 
   .about--flex {
     display: flex;
@@ -339,8 +342,18 @@ select {
       }
     }
 
-    .about--experience {
+    .experience {
       width: 100%;
+
+      .experience--title {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .experience--title-info {
+          font-size: 0.72em;
+        }
+      }
     }
   }
 
@@ -350,7 +363,7 @@ select {
       gap: 0 4em;
 
       .about--wrapper,
-      .about--experience {
+      .experience {
         width: 50%;
       }
 
@@ -364,10 +377,95 @@ select {
 
 // End About Styles ----------
 
+// Projects Styles ----------
+.projects {
+  .projects-slider {
+    margin-top: 2em;
+    position: relative;
+
+    .project {
+      max-width: 25em;
+      border: solid 1px var(--primary-color);
+      border-radius: 1em;
+      overflow: hidden;
+      // min-height: 31em;
+      height: 34em;
+
+      .project--img-container {
+        position: relative;
+        height: 35%;
+        overflow: hidden;
+
+        .project--img-gradient {
+          z-index: 2;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(180deg, rgba(2, 0, 36, 0) 10%, var(--primary-color));
+        }
+
+
+        &:hover {
+
+          img {
+            transition: all 0.5s ease-out;
+            transform: scale(1.15);
+            object-position: center top;
+          }
+
+        }
+      }
+
+      .project--information-flex {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 65%;
+
+        .project--information {
+
+          // margin-bottom: auto;
+          .project--title {
+            font-weight: bold;
+            font-size: 1.4em;
+          }
+
+          p {
+            font-size: 1.1em;
+          }
+        }
+
+      }
+
+      .project--links {
+        color: var(--text-color);
+
+        .project--link {
+          width: fit-content;
+          height: fit-content;
+          display: inline-block;
+          color: var(--text-color);
+
+          &:visited {
+            color: var(--text-color);
+          }
+
+          svg {
+            fill: currentColor;
+            width: 1.5em;
+
+          }
+        }
+      }
+    }
+  }
+}
+
 // Footer Styles ----------
 .page-footer {
-  padding: 3% 1em;
   text-align: center;
+  background-color: var(--section-bg-color);
 }
 
 // End Footer Styles ----------
