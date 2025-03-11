@@ -475,6 +475,32 @@ select {
 .page-footer {
   text-align: center;
   background-color: var(--section-bg-color);
+
+  .page-footer--wrapper {
+    color: var(--text-color);
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 0 1em;
+      margin-top: 1em;
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:visited {
+          color: var(--text-color);
+        }
+
+        svg {
+          width: 1.4em;
+          fill: currentColor;
+
+        }
+      }
+    }
+  }
 }
 
 // End Footer Styles ----------

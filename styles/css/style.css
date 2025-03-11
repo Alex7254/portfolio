@@ -363,4 +363,24 @@ select {
 .page-footer {
   text-align: center;
   background-color: var(--section-bg-color);
+}
+.page-footer .page-footer--wrapper {
+  color: var(--text-color);
+}
+.page-footer .page-footer--wrapper .socials {
+  display: flex;
+  justify-content: center;
+  gap: 0 1em;
+  margin-top: 1em;
+}
+.page-footer .page-footer--wrapper .socials a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.page-footer .page-footer--wrapper .socials a:visited {
+  color: var(--text-color);
+}
+.page-footer .page-footer--wrapper .socials a svg {
+  width: 1.4em;
+  fill: currentColor;
 }/*# sourceMappingURL=style.css.map */
