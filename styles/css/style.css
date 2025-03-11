@@ -297,6 +297,9 @@ select {
   }
 }
 
+.projects .projects--wrapper > p {
+  font-size: 1.1em;
+}
 .projects .projects-slider {
   margin-top: 2em;
   position: relative;
