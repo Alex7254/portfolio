@@ -183,6 +183,7 @@ select {
   top: 0;
   padding: 1em;
   border-bottom: solid 2px #fff;
+  z-index: 1;
 }
 .page-header .page-header--wrapper {
   display: flex;
