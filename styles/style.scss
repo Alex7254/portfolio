@@ -379,6 +379,14 @@ select {
 
 // Projects Styles ----------
 .projects {
+
+  .projects--wrapper {
+    >p {
+
+      font-size: 1.1em;
+    }
+  }
+
   .projects-slider {
     margin-top: 2em;
     position: relative;
