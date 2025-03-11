@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <title>Alejandro Garcia | Portfolio</title>
   <link rel="icon" type="image/svg" href="assets/images/favicon.svg" />
-  <link rel="stylesheet" href="styles/css/style.css?v0.0.5">
+  <link rel="stylesheet" href="styles/css/style.css?v0.0.7">
   <script src="assets/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.7.1/dist/glide.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.7.1/dist/css/glide.core.min.css" rel="stylesheet">
@@ -27,9 +27,9 @@
       </div>
       <nav class="main-nav">
         <ul class="main-nav--items">
-          <li class="main-nav--item"><a href="#">Home</a></li>
-          <li class="main-nav--item"><a href="#">About</a></li>
-          <li class="main-nav--item"><a href="#">Projects</a></li>
+          <li class="main-nav--item"><a href="#hero">Home</a></li>
+          <li class="main-nav--item"><a href="#about">About</a></li>
+          <li class="main-nav--item"><a href="#projects">Projects</a></li>
         </ul>
       </nav>
       <button aria-label="Theme Toggle" class="theme-toggle" id="themeToggle">
@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero--wrapper max-width">
       <div class="hero--flex">
         <div class="hero--flex-left">
@@ -60,7 +60,7 @@
   </section>
 
 
-  <section class="about section-padding">
+  <section id="about" class="about section-padding">
     <div class="about--flex max-width">
       <div class="about--wrapper">
         <h2>Some Things About Me</h2>
@@ -144,7 +144,7 @@
     </div>
   </section>
 
-  <section class="projects section-padding">
+  <section id="projects" class="projects section-padding">
     <div class="projects--wrapper max-width">
       <h2>My Recent Projects</h2>
       <p>Throughout my career, I’ve had the privilege of working on a variety of web development projects, each tailored
