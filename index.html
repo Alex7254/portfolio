@@ -15,7 +15,7 @@
 
 <body>
 
-  <header class="page-header">
+  <header class="page-header anim-fadein">
     <div class="page-header--wrapper max-width">
       <div class="logo-wrapper">
         <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="64" height="46" viewBox="0 0 64 46">
@@ -45,8 +45,8 @@
     </div>
   </header>
 
-  <section id="hero" class="hero">
-    <div class="hero--wrapper max-width">
+  <section id="hero" class="hero anim-fadeup">
+    <div class="hero--wrapper max-width anim-child">
       <div class="hero--flex">
         <div class="hero--flex-left">
           <h1>Alejandro Isac Garcia-Ruiz</h1>
@@ -62,7 +62,7 @@
 
   <section id="about" class="about section-padding">
     <div class="about--flex max-width">
-      <div class="about--wrapper">
+      <div class="about--wrapper anim-faderight">
         <h2>Some Things About Me</h2>
         <p>Hi, I’m Alejandro, a passionate and detail-oriented web developer with 5 years of experience in crafting
           dynamic, user-friendly websites.I’ve had the opportunity to work with a wide range of technologies,
@@ -76,7 +76,7 @@
           from day one.</p>
       </div>
 
-      <div class="experience">
+      <div class="experience anim-fadeleft">
         <ul class="accordion-items">
           <li class="faq-item">
             <span class="accordion faq-title">
@@ -144,7 +144,7 @@
     </div>
   </section>
 
-  <section id="projects" class="projects section-padding">
+  <section id="projects" class="projects section-padding anim-fadeup">
     <div class="projects--wrapper max-width">
       <h2>My Recent Projects</h2>
       <p>Throughout my career, I’ve had the privilege of working on a variety of web development projects, each tailored
@@ -320,11 +320,11 @@
   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
   <script>
-    new Glide('.glide', {
+    const glide = new Glide('.glide', {
       type: 'carousel',
       startAt: 0,
       perView: 4,
-      autoplay: 3100,
+      autoplay: false,
       animationDuration: 1500,
       focusat: '1',
       peek: {
@@ -343,7 +343,42 @@
           focusat: 'center'
         }
       }
-    }).mount()
+    });
+
+    glide.mount()
+
+    function initGlideAutoplayWhenVisible(glideInstance) {
+      // Get the Glide.js slider element
+      const glideElement = glideInstance._o.element;
+
+      // Options for the Intersection Observer
+      const options = {
+        root: null, // Use the viewport as the root
+        threshold: 0.5, // Trigger when 50% of the slider is visible
+      };
+
+      // Callback function for the Intersection Observer
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start autoplay when the slider is visible
+            glideInstance.update({ autoplay: 3100 }); // Adjust autoplay speed as needed
+            glideInstance.play();
+          } else {
+            // Stop autoplay when the slider is not visible
+            glideInstance.pause();
+          }
+        });
+      };
+
+      // Create the Intersection Observer
+      const observer = new IntersectionObserver(callback, options);
+
+      // Observe the Glide.js slider element
+      observer.observe(glideElement);
+    }
+
+    initGlideAutoplayWhenVisible(glide);
   </script>
 
 </body>

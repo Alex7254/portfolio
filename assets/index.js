@@ -57,3 +57,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+/**
+ * Watches for elements with class starting with "anim-"
+ * Adds "anim-triggered" when they enter viewport
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const animElements = document.querySelectorAll('[class*="anim-"]:not(.anim-triggered)');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Only trigger when >50% of element is visible
+      if (entry.intersectionRatio > 0.5) {
+        entry.target.classList.add('anim-triggered');
+
+        // Stagger children
+        const children = entry.target.querySelectorAll('.anim-child');
+        children.forEach((child, i) => {
+          child.style.transitionDelay = `${i * 0.15}s`;
+        });
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: [0, 0.1, 0.5, 1] // Multiple visibility checkpoints
+  });
+
+  animElements.forEach(el => observer.observe(el));
+});
