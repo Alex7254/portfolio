@@ -383,4 +383,77 @@ select {
 .page-footer .page-footer--wrapper .socials a svg {
   width: 1.4em;
   fill: currentColor;
+}
+
+/* ===== Base Animation Styles ===== */
+/* Fade + Up Animation */
+.anim-fadeup {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+/* Simple Fade In */
+.anim-fadein {
+  opacity: 0;
+  transition: opacity 0.99s ease-in;
+}
+
+/* Slide From Left (Fade Right) */
+.anim-faderight {
+  opacity: 0;
+  transform: translateX(-20px);
+  /* Starts left of final position */
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+/* ===== Optional: Direction Variations ===== */
+/* Slide From Right */
+.anim-fadeleft {
+  /* You already had this, but renamed for clarity */
+  opacity: 0;
+  transform: translateX(20px);
+  /* Starts right of final position */
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+/* Fade + Zoom Animation */
+.anim-fadezoom {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+/* ===== Triggered State (Shared) ===== */
+.anim-triggered {
+  opacity: 1;
+  transform: translateX(0);
+  /* Resets translateX for faderight */
+}
+
+/* ===== Staggered Children ===== */
+.anim-child {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.anim-triggered .anim-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+  [class*=anim-] {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* No-JS fallback */
+.no-js [class*=anim-] {
+  opacity: 1 !important;
+  transform: none !important;
 }/*# sourceMappingURL=style.css.map */
