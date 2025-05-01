@@ -21,7 +21,7 @@ svg {
 body {
   // Accessible line height
   line-height: 1.5;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.051em;
   word-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-color);
@@ -42,6 +42,7 @@ h6,
   text-wrap: balance;
   overflow-wrap: break-word;
   width: fit-content;
+  text-shadow: 2px 2px 1.5px var(--shadow-color);
 }
 
 img,
@@ -81,6 +82,37 @@ select {
 
 // End Reset Styles ----------
 
+// Scrollbar Styles ----------
+
+body {
+  --sb-track-color: var(--item-bg-color);
+  --sb-thumb-color: var(--primary-color);
+  --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+// End Scrollbar Styles ----------
+
 // Theme Toggle ----------
 :root {
   --bg-color: hsl(0, 0%, 100%);
@@ -88,6 +120,7 @@ select {
   --section-bg-color: hsl(248, 100%, 97%);
   --primary-color: hsl(221, 56%, 36%);
   --item-bg-color: hsl(0, 0%, 100%);
+  --shadow-color: hsla(0, 0%, 42%, 0.5);
 }
 
 [data-theme="dark"] {
@@ -96,13 +129,13 @@ select {
   --section-bg-color: hsl(235, 86%, 11%);
   --primary-color: hsl(256, 92%, 85%);
   --item-bg-color: hsl(235, 86%, 25%);
+  --shadow-color: hsla(0, 0%, 65%, 0.5);
 
   $bg-color: #131314;
   $text-color: #fff;
 
   .page-header {
     box-shadow: none;
-    border-bottom: solid 2px var(--primary-color);
   }
 }
 
@@ -116,6 +149,10 @@ select {
 
 .section-padding {
   padding: 3% 1.5em;
+
+  &.page-footer {
+    padding: 1.8% 1.5em;
+  }
 }
 
 // Accordion Items
@@ -183,7 +220,7 @@ select {
 
     &.active {
       display: block;
-      box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.45);
     }
 
     p {
@@ -215,12 +252,11 @@ select {
 
 //Header Styles ----------
 .page-header {
-  background-color: var(--bg-color);
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  background-color: var(--section-bg-color);
   position: sticky;
   top: 0;
   padding: 1em;
-  border-bottom: solid 2px #fff;
+  border-bottom: solid 2px var(--primary-color);
   z-index: 1;
 
   .page-header--wrapper {
@@ -233,9 +269,9 @@ select {
 
     .logo-wrapper {
       .logo {
-        color: var(--primary-color);
+        color: var(--text-color);
         max-width: 2.4em;
-        fill: var(--primary-color);
+        fill: var(--text-color);
       }
     }
 
@@ -270,7 +306,7 @@ select {
         width: 1.7em;
         cursor: pointer;
         padding: 0.3em;
-        fill: var(--primary-color);
+        fill: var(--text-color);
 
         &.display-none {
           display: none;
@@ -327,6 +363,8 @@ select {
 // About Styles ----------
 .about {
   background-color: var(--section-bg-color);
+  border-top: solid 2px var(--primary-color);
+  border-bottom: solid 2px var(--primary-color);
 
   .about--flex {
     display: flex;
@@ -383,8 +421,13 @@ select {
 
   .projects--wrapper {
     >p {
+      font-size: 1.15em;
+      text-align: center;
+    }
 
-      font-size: 1.1em;
+    >h2 {
+      margin: auto;
+      text-align: center;
     }
   }
 
@@ -393,16 +436,17 @@ select {
     position: relative;
 
     .project {
-      max-width: 25em;
+      // max-width: 25em;
       border: solid 1px var(--primary-color);
       border-radius: 1em;
       overflow: hidden;
       // min-height: 31em;
-      height: 34em;
+      max-height: 39em;
+      height: unset;
 
       .project--img-container {
         position: relative;
-        height: 35%;
+        height: 38%;
         overflow: hidden;
 
         .project--img-gradient {
@@ -430,7 +474,7 @@ select {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 65%;
+        height: 62%;
 
         .project--information {
 
@@ -475,6 +519,7 @@ select {
 .page-footer {
   text-align: center;
   background-color: var(--section-bg-color);
+  border-top: solid 2px var(--primary-color);
 
   .page-footer--wrapper {
     color: var(--text-color);
