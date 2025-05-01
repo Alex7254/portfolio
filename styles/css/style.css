@@ -15,7 +15,7 @@ svg {
 
 body {
   line-height: 1.5;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.051em;
   word-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-color);
@@ -330,22 +330,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 .projects .projects--wrapper > p {
-  font-size: 1.1em;
+  font-size: 1.15em;
+  text-align: center;
+}
+.projects .projects--wrapper > h2 {
+  margin: auto;
+  text-align: center;
 }
 .projects .projects-slider {
   margin-top: 2em;
   position: relative;
 }
 .projects .projects-slider .project {
-  max-width: 25em;
   border: solid 1px var(--primary-color);
   border-radius: 1em;
   overflow: hidden;
-  height: 34em;
+  max-height: 39em;
+  height: unset;
 }
 .projects .projects-slider .project .project--img-container {
   position: relative;
-  height: 35%;
+  height: 38%;
   overflow: hidden;
 }
 .projects .projects-slider .project .project--img-container .project--img-gradient {
@@ -365,7 +370,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 65%;
+  height: 62%;
 }
 .projects .projects-slider .project .project--information-flex .project--information .project--title {
   font-weight: bold;

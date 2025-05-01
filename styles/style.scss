@@ -21,7 +21,7 @@ svg {
 body {
   // Accessible line height
   line-height: 1.5;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.051em;
   word-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-color);
@@ -421,8 +421,13 @@ body::-webkit-scrollbar-thumb {
 
   .projects--wrapper {
     >p {
+      font-size: 1.15em;
+      text-align: center;
+    }
 
-      font-size: 1.1em;
+    >h2 {
+      margin: auto;
+      text-align: center;
     }
   }
 
@@ -431,16 +436,17 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 
     .project {
-      max-width: 25em;
+      // max-width: 25em;
       border: solid 1px var(--primary-color);
       border-radius: 1em;
       overflow: hidden;
       // min-height: 31em;
-      height: 34em;
+      max-height: 39em;
+      height: unset;
 
       .project--img-container {
         position: relative;
-        height: 35%;
+        height: 38%;
         overflow: hidden;
 
         .project--img-gradient {
@@ -468,7 +474,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 65%;
+        height: 62%;
 
         .project--information {
 
