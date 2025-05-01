@@ -102,15 +102,15 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
-  
+
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
+
 // End Scrollbar Styles ----------
 
 // Theme Toggle ----------
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-thumb {
   --section-bg-color: hsl(248, 100%, 97%);
   --primary-color: hsl(221, 56%, 36%);
   --item-bg-color: hsl(0, 0%, 100%);
-  --shadow-color: hsla(0, 0%, 42%, 0.5);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+  --shadow-color: hsla(0, 0%, 42%, 0.5);
 }
 
 [data-theme="dark"] {
@@ -129,7 +129,7 @@ body::-webkit-scrollbar-thumb {
   --section-bg-color: hsl(235, 86%, 11%);
   --primary-color: hsl(256, 92%, 85%);
   --item-bg-color: hsl(235, 86%, 25%);
-  --shadow-color: hsla(0, 0%, 65%, 0.5);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+  --shadow-color: hsla(0, 0%, 65%, 0.5);
 
   $bg-color: #131314;
   $text-color: #fff;
@@ -149,6 +149,10 @@ body::-webkit-scrollbar-thumb {
 
 .section-padding {
   padding: 3% 1.5em;
+
+  &.page-footer {
+    padding: 1.8% 1.5em;
+  }
 }
 
 // Accordion Items
@@ -249,7 +253,6 @@ body::-webkit-scrollbar-thumb {
 //Header Styles ----------
 .page-header {
   background-color: var(--section-bg-color);
-  box-shadow: 0px 2px 3px 0px var(--shadow-color);
   position: sticky;
   top: 0;
   padding: 1em;
@@ -266,9 +269,9 @@ body::-webkit-scrollbar-thumb {
 
     .logo-wrapper {
       .logo {
-        color: var(--primary-color);
+        color: var(--text-color);
         max-width: 2.4em;
-        fill: var(--primary-color);
+        fill: var(--text-color);
       }
     }
 
@@ -303,7 +306,7 @@ body::-webkit-scrollbar-thumb {
         width: 1.7em;
         cursor: pointer;
         padding: 0.3em;
-        fill: var(--primary-color);
+        fill: var(--text-color);
 
         &.display-none {
           display: none;
@@ -360,6 +363,7 @@ body::-webkit-scrollbar-thumb {
 // About Styles ----------
 .about {
   background-color: var(--section-bg-color);
+  border: solid 2px var(--primary-color);
 
   .about--flex {
     display: flex;
@@ -508,6 +512,7 @@ body::-webkit-scrollbar-thumb {
 .page-footer {
   text-align: center;
   background-color: var(--section-bg-color);
+  border-top: solid 2px var(--primary-color);
 
   .page-footer--wrapper {
     color: var(--text-color);
