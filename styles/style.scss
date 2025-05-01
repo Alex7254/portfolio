@@ -363,7 +363,8 @@ body::-webkit-scrollbar-thumb {
 // About Styles ----------
 .about {
   background-color: var(--section-bg-color);
-  border: solid 2px var(--primary-color);
+  border-top: solid 2px var(--primary-color);
+  border-bottom: solid 2px var(--primary-color);
 
   .about--flex {
     display: flex;
