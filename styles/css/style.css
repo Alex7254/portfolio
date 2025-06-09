@@ -299,10 +299,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 4em 0;
-}
-.about .about--flex .about--wrapper {
-  margin-bottom: 2em;
+  gap: 1em 0;
 }
 .about .about--flex .about--wrapper p {
   font-size: 1.15em;
