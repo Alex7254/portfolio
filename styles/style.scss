@@ -246,6 +246,10 @@ body::-webkit-scrollbar-thumb {
           color: var(--primary-color);
         }
       }
+
+      ul {
+        padding-left: 1.5em;
+      }
     }
   }
 }
@@ -371,11 +375,9 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 4em 0;
+    gap: 1em 0;
 
     .about--wrapper {
-      margin-bottom: 2em;
-
       p {
         font-size: 1.15em;
       }
